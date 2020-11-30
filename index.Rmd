@@ -1,0 +1,165 @@
+---
+title: " Ensino Superior "
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    source_code: embed
+---
+
+<style>
+.navbar {
+  background-color:#acdfdd;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+    background-color: yellow;
+    color: black;
+}
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  color: white;
+  background-color: yellow;
+}
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+  background-color: yellow;
+}
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+  border-color: yellow;
+}
+</style>
+
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+#library(ggplot2)
+library("DT")
+library("readr")
+library("dplyr")
+library("ggplot2")
+library("kableExtra")
+library("tidyr")
+library("formattable")
+library("plotly")
+library("ggplotlyExtra")
+library("ggpubr")
+library("tidyverse")
+library("hrbrthemes")
+library("waffle")
+library(ggthemes)
+library(extrafont)
+
+CENSO_SUP <- NULL
+CENSO_SUP <- read_delim("data/educacao/CENSO_SUPERIOR/DM_ALUNO_2009_2018_CO_IES_by_ANO_TP_COR_RACA_TP_SEXO.csv",",",escape_double = FALSE,trim_ws = FALSE)
+#CENSO_SUP$TP_SEXO <- ifelse(CENSO_SUP$TP_SEXO==1,"Feminino","Masculino")
+CENSO_SUP$TP_SEXO <- ifelse(CENSO_SUP$TP_SEXO==1,"F","M")
+
+# Transformacao da variavel numerica de acordo com o vocabulario 
+CENSO_SUP$TP_COR_RACA <- ifelse(CENSO_SUP$TP_COR_RACA==0,"*NQD",
+                                CENSO_SUP$TP_COR_RACA <- ifelse(CENSO_SUP$TP_COR_RACA==1,"Branca",CENSO_SUP$TP_COR_RACA <- ifelse(CENSO_SUP$TP_COR_RACA==2,"Preta",CENSO_SUP$TP_COR_RACA <- ifelse(CENSO_SUP$TP_COR_RACA==3,"Parda",CENSO_SUP$TP_COR_RACA <- ifelse(CENSO_SUP$TP_COR_RACA==4,"Amarela",CENSO_SUP$TP_COR_RACA <- ifelse(CENSO_SUP$TP_COR_RACA==5,"Indígena",CENSO_SUP$TP_COR_RACA <- ifelse(CENSO_SUP$TP_COR_RACA==9,"*NDI",NA)))))))
+
+CONCLUINTES_SSA <- CENSO_SUP %>% filter(IN_CONCLUINTE==1)
+
+
+
+HEAT_SSA_IES_SEXO_RACA <- CONCLUINTES_SSA %>% dplyr::group_by(ANO_CENSO_SUP,TP_SEXO,TP_COR_RACA) %>% summarise(quantidade = sum(value,na.rm = "TRUE")) 
+
+
+#target = c("Amarela","Branca","Indígena","Parda","Preta")
+target = c("Parda","Preta")
+HEAT_SSA_IES_SEXO_RACA_S_NQD_NDI <- HEAT_SSA_IES_SEXO_RACA %>%  filter(TP_COR_RACA %in% target) %>%
+  dplyr::group_by(ANO_CENSO_SUP,TP_SEXO,TP_COR_RACA) %>% 
+  summarise(quantidadef = sum(quantidade,na.rm = "TRUE")) 
+
+
+```
+
+Column {data-width=300}
+-------------------------------------
+
+
+### Concluintes do Sexo Feminino
+
+```{r}
+Sexo_Feminino <- CONCLUINTES_SSA %>% filter(TP_SEXO %in% c("F")) %>% summarise(valor=sum(value))
+valueBox(Sexo_Feminino, icon = "fa-pencil",href="#concluintes-f")
+```
+
+### Concluintes do Sexo Masculino
+
+```{r}
+Sexo_Masculino <- CONCLUINTES_SSA %>% filter(TP_SEXO %in% c("M")) %>% summarise(valor=sum(value))
+valueBox(Sexo_Masculino, icon = "fa-pencil", href="#concluintes-m")
+```
+
+### Total de Concluintes
+
+```{r}
+Total <- CONCLUINTES_SSA %>% summarise(valor=sum(value))
+valueBox(Total, 
+         icon = "fa-child",
+         color = ifelse(Total > 10, "warning", "primary"))
+```
+
+Column {data-width=1000 .tabset .tabset-fade}
+-------------------------------------   
+
+### Concluintes (F)
+
+```{r, eval=TRUE}
+
+objeto <- CONCLUINTES_SSA %>% filter(TP_SEXO %in% c("F")) %>% group_by(ANO_CENSO_SUP,TP_COR_RACA) %>% summarise(value =sum(value)) %>%
+ggplot(aes(x=ANO_CENSO_SUP,y=value,fill = TP_COR_RACA)) +
+  geom_bar(aes(x=ANO_CENSO_SUP,y=value,fill = TP_COR_RACA),stat = "identity") + 
+  labs(
+    title = "Número de concluintes em ensino superior",
+    subtitle = "Desagregado por raça/cor",
+    x = "Ano",
+    y = "Nº",
+    fill = "Raça/Cor"
+  ) +
+  theme(legend.text = element_text(size = 14)) +
+  theme(legend.title = element_text(size = 16)) +
+  theme(legend.position = "none") +
+  scale_color_ipsum() +
+  theme_ipsum_rc()
+  #theme_minimal(base_family = "Roboto Condensed") +
+  #theme(panel.grid = element_blank(), axis.ticks.y = element_line()) +
+  #guides(fill = guide_legend(reverse = TRUE))
+
+ggplotly(objeto)
+
+```
+
+
+
+### Concluintes (M)
+
+```{r, eval=TRUE}
+
+
+objeto <- CONCLUINTES_SSA %>% filter(TP_SEXO %in% c("M")) %>% group_by(ANO_CENSO_SUP,TP_COR_RACA) %>% summarise(value =sum(value)) %>%
+ggplot(aes(x=ANO_CENSO_SUP,y=value,fill = TP_COR_RACA)) +
+  geom_bar(aes(x=ANO_CENSO_SUP,y=value,fill = TP_COR_RACA),stat = "identity") + 
+  labs(
+    title = "Número de concluintes em ensino superior",
+    subtitle = "Desagregado por raça/cor",
+    x = "Ano",
+    y = "Nº",
+    fill = "Raça/Cor"
+  ) +
+  scale_color_ipsum() +
+  theme_ipsum_rc()
+  #theme_minimal(base_family = "Roboto Condensed") +
+  #theme(panel.grid = element_blank(), axis.ticks.y = element_line()) +
+  #guides(fill = guide_legend(reverse = TRUE))
+
+ggplotly(objeto)
+
+```
+
+
