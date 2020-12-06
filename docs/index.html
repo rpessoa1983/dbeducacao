@@ -22,7 +22,7 @@ window.FlexDashboardComponents = [];
 </script>
 
 <script id="flexdashboard-navbar" type="application/json">
-[{"title":"Source Code","icon":"fa-code","href":"source_embed","align":"right"}]
+[{"icon":"fa-share-alt","items":[{"title":"Twitter","icon":"fa-twitter"},{"title":"Facebook","icon":"fa-facebook"},{"title":"Google+","icon":"fa-google-plus"},{"title":"LinkedIn","icon":"fa-linkedin"},{"title":"Pinterest","icon":"fa-pinterest"}]},{"title":"Source Code","icon":"fa-code","href":"source_embed","align":"right"}]
 </script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -802,6 +802,7 @@ html, body {
 </style>
 
 
+<link rel="stylesheet" href="style.css" type="text/css" />
 
 </head>
 
@@ -818,7 +819,7 @@ html, body {
 </button>
 
 <span class="navbar-logo pull-left">
-  
+  <img src="figure/reconhecendosalvador.gif" class="navbar-logo"/>
 </span>
 <span class="navbar-brand">
   Ensino Superior
@@ -2628,31 +2629,6 @@ window.FlexDashboardComponents.push({
 
 <div id="dashboard-container">
 
-<style>
-.navbar {
-  background-color:#acdfdd;
-}
-
-.navbar-inverse .navbar-nav > li > a:hover,
-.navbar-inverse .navbar-nav > li > a:focus {
-    background-color: yellow;
-    color: black;
-}
-.navbar-inverse .navbar-nav > .active > a,
-.navbar-inverse .navbar-nav > .active > a:hover,
-.navbar-inverse .navbar-nav > .active > a:focus {
-  color: white;
-  background-color: yellow;
-}
-.navbar-inverse .navbar-toggle:hover,
-.navbar-inverse .navbar-toggle:focus {
-  background-color: yellow;
-}
-.navbar-inverse .navbar-collapse,
-.navbar-inverse .navbar-form {
-  border-color: yellow;
-}
-</style>
 <div id="column" class="section level2" data-width="300">
 <h2>Column</h2>
 <div id="concluintes-do-sexo-feminino" class="section level3">
@@ -2660,7 +2636,7 @@ window.FlexDashboardComponents.push({
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<span class="value-output" data-icon="fa-pencil" data-href="#concluintes-f">122781</span>
+<span class="value-output" data-icon="fa-pencil" data-color="#fac113" data-href="#concluintes-f">122781</span>
 </div>
 <div id="concluintes-do-sexo-masculino" class="section level3">
 <h3>Concluintes do Sexo Masculino</h3>
@@ -2674,26 +2650,18 @@ window.FlexDashboardComponents.push({
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<span class="value-output" data-icon="fa-child" data-color="bg-warning">198744</span>
+<span class="value-output" data-icon="fa-child" data-color="#db4470">198744</span>
 </div>
 </div>
-<div id="column-1" class="section level2 tabset tabset-fade" data-width="1000">
+<div id="column-1" class="section level2 tabset tabset-fade" data-width="800">
 <h2>Column</h2>
 <div id="concluintes-f" class="section level3">
 <h3>Concluintes (F)</h3>
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<div id="htmlwidget-556d807a0d1b99db8cc8" style="width:576px;height:460.8px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-556d807a0d1b99db8cc8">{"x":{"data":[{"orientation":"v","width":[0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091],"base":[7452,9290,7836,8153,7584,8473,10159,10987,12440,13787],"x":[2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],"y":[4513,3090,4384,4158,3375,2655,1891,1371,844,339],"text":["ANO_CENSO_SUP: 2009<br />value: 4513<br />TP_COR_RACA: *NDI<br />ANO_CENSO_SUP: 2009<br />value: 4513<br />TP_COR_RACA: *NDI","ANO_CENSO_SUP: 2010<br />value: 3090<br />TP_COR_RACA: *NDI<br />ANO_CENSO_SUP: 2010<br />value: 3090<br />TP_COR_RACA: *NDI","ANO_CENSO_SUP: 2011<br />value: 4384<br />TP_COR_RACA: *NDI<br />ANO_CENSO_SUP: 2011<br />value: 4384<br />TP_COR_RACA: *NDI","ANO_CENSO_SUP: 2012<br />value: 4158<br />TP_COR_RACA: *NDI<br />ANO_CENSO_SUP: 2012<br />value: 4158<br />TP_COR_RACA: *NDI","ANO_CENSO_SUP: 2013<br />value: 3375<br />TP_COR_RACA: *NDI<br />ANO_CENSO_SUP: 2013<br />value: 3375<br />TP_COR_RACA: *NDI","ANO_CENSO_SUP: 2014<br />value: 2655<br />TP_COR_RACA: *NDI<br />ANO_CENSO_SUP: 2014<br />value: 2655<br />TP_COR_RACA: *NDI","ANO_CENSO_SUP: 2015<br />value: 1891<br />TP_COR_RACA: *NDI<br />ANO_CENSO_SUP: 2015<br />value: 1891<br />TP_COR_RACA: *NDI","ANO_CENSO_SUP: 2016<br />value: 1371<br />TP_COR_RACA: *NDI<br />ANO_CENSO_SUP: 2016<br />value: 1371<br />TP_COR_RACA: *NDI","ANO_CENSO_SUP: 2017<br />value:  844<br />TP_COR_RACA: *NDI<br />ANO_CENSO_SUP: 2017<br />value:  844<br />TP_COR_RACA: *NDI","ANO_CENSO_SUP: 2018<br />value:  339<br />TP_COR_RACA: *NDI<br />ANO_CENSO_SUP: 2018<br />value:  339<br />TP_COR_RACA: *NDI"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"(*NDI,1)","legendgroup":"(*NDI,1)","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091],"base":[2592,3334,3506,4817,4425,4959,5821,5976,7086,8848],"x":[2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],"y":[4860,5956,4330,3336,3159,3514,4338,5011,5354,4939],"text":["ANO_CENSO_SUP: 2009<br />value: 4860<br />TP_COR_RACA: *NQD<br />ANO_CENSO_SUP: 2009<br />value: 4860<br />TP_COR_RACA: *NQD","ANO_CENSO_SUP: 2010<br />value: 5956<br />TP_COR_RACA: *NQD<br />ANO_CENSO_SUP: 2010<br />value: 5956<br />TP_COR_RACA: *NQD","ANO_CENSO_SUP: 2011<br />value: 4330<br />TP_COR_RACA: *NQD<br />ANO_CENSO_SUP: 2011<br />value: 4330<br />TP_COR_RACA: *NQD","ANO_CENSO_SUP: 2012<br />value: 3336<br />TP_COR_RACA: *NQD<br />ANO_CENSO_SUP: 2012<br />value: 3336<br />TP_COR_RACA: *NQD","ANO_CENSO_SUP: 2013<br />value: 3159<br />TP_COR_RACA: *NQD<br />ANO_CENSO_SUP: 2013<br />value: 3159<br />TP_COR_RACA: *NQD","ANO_CENSO_SUP: 2014<br />value: 3514<br />TP_COR_RACA: *NQD<br />ANO_CENSO_SUP: 2014<br />value: 3514<br />TP_COR_RACA: *NQD","ANO_CENSO_SUP: 2015<br />value: 4338<br />TP_COR_RACA: *NQD<br />ANO_CENSO_SUP: 2015<br />value: 4338<br />TP_COR_RACA: *NQD","ANO_CENSO_SUP: 2016<br />value: 5011<br />TP_COR_RACA: *NQD<br />ANO_CENSO_SUP: 2016<br />value: 5011<br />TP_COR_RACA: *NQD","ANO_CENSO_SUP: 2017<br />value: 5354<br />TP_COR_RACA: *NQD<br />ANO_CENSO_SUP: 2017<br />value: 5354<br />TP_COR_RACA: *NQD","ANO_CENSO_SUP: 2018<br />value: 4939<br />TP_COR_RACA: *NQD<br />ANO_CENSO_SUP: 2018<br />value: 4939<br />TP_COR_RACA: *NQD"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(196,154,0,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"(*NQD,1)","legendgroup":"(*NQD,1)","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091],"base":[2572,3171,3045,4153,4041,4709,5578,5661,6863,8494],"x":[2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],"y":[20,163,461,664,384,250,243,315,223,354],"text":["ANO_CENSO_SUP: 2009<br />value:   20<br />TP_COR_RACA: Amarela<br />ANO_CENSO_SUP: 2009<br />value:   20<br />TP_COR_RACA: Amarela","ANO_CENSO_SUP: 2010<br />value:  163<br />TP_COR_RACA: Amarela<br />ANO_CENSO_SUP: 2010<br />value:  163<br />TP_COR_RACA: Amarela","ANO_CENSO_SUP: 2011<br />value:  461<br />TP_COR_RACA: Amarela<br />ANO_CENSO_SUP: 2011<br />value:  461<br />TP_COR_RACA: Amarela","ANO_CENSO_SUP: 2012<br />value:  664<br />TP_COR_RACA: Amarela<br />ANO_CENSO_SUP: 2012<br />value:  664<br />TP_COR_RACA: Amarela","ANO_CENSO_SUP: 2013<br />value:  384<br />TP_COR_RACA: Amarela<br />ANO_CENSO_SUP: 2013<br />value:  384<br />TP_COR_RACA: Amarela","ANO_CENSO_SUP: 2014<br />value:  250<br />TP_COR_RACA: Amarela<br />ANO_CENSO_SUP: 2014<br />value:  250<br />TP_COR_RACA: Amarela","ANO_CENSO_SUP: 2015<br />value:  243<br />TP_COR_RACA: Amarela<br />ANO_CENSO_SUP: 2015<br />value:  243<br />TP_COR_RACA: Amarela","ANO_CENSO_SUP: 2016<br />value:  315<br />TP_COR_RACA: Amarela<br />ANO_CENSO_SUP: 2016<br />value:  315<br />TP_COR_RACA: Amarela","ANO_CENSO_SUP: 2017<br />value:  223<br />TP_COR_RACA: Amarela<br />ANO_CENSO_SUP: 2017<br />value:  223<br />TP_COR_RACA: Amarela","ANO_CENSO_SUP: 2018<br />value:  354<br />TP_COR_RACA: Amarela<br />ANO_CENSO_SUP: 2018<br />value:  354<br />TP_COR_RACA: Amarela"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(83,180,0,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"(Amarela,1)","legendgroup":"(Amarela,1)","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091],"base":[2040,2545,2476,3495,3464,4169,4893,4913,5964,7232],"x":[2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],"y":[532,626,569,658,577,540,685,748,899,1262],"text":["ANO_CENSO_SUP: 2009<br />value:  532<br />TP_COR_RACA: Branca<br />ANO_CENSO_SUP: 2009<br />value:  532<br />TP_COR_RACA: Branca","ANO_CENSO_SUP: 2010<br />value:  626<br />TP_COR_RACA: Branca<br />ANO_CENSO_SUP: 2010<br />value:  626<br />TP_COR_RACA: Branca","ANO_CENSO_SUP: 2011<br />value:  569<br />TP_COR_RACA: Branca<br />ANO_CENSO_SUP: 2011<br />value:  569<br />TP_COR_RACA: Branca","ANO_CENSO_SUP: 2012<br />value:  658<br />TP_COR_RACA: Branca<br />ANO_CENSO_SUP: 2012<br />value:  658<br />TP_COR_RACA: Branca","ANO_CENSO_SUP: 2013<br />value:  577<br />TP_COR_RACA: Branca<br />ANO_CENSO_SUP: 2013<br />value:  577<br />TP_COR_RACA: Branca","ANO_CENSO_SUP: 2014<br />value:  540<br />TP_COR_RACA: Branca<br />ANO_CENSO_SUP: 2014<br />value:  540<br />TP_COR_RACA: Branca","ANO_CENSO_SUP: 2015<br />value:  685<br />TP_COR_RACA: Branca<br />ANO_CENSO_SUP: 2015<br />value:  685<br />TP_COR_RACA: Branca","ANO_CENSO_SUP: 2016<br />value:  748<br />TP_COR_RACA: Branca<br />ANO_CENSO_SUP: 2016<br />value:  748<br />TP_COR_RACA: Branca","ANO_CENSO_SUP: 2017<br />value:  899<br />TP_COR_RACA: Branca<br />ANO_CENSO_SUP: 2017<br />value:  899<br />TP_COR_RACA: Branca","ANO_CENSO_SUP: 2018<br />value: 1262<br />TP_COR_RACA: Branca<br />ANO_CENSO_SUP: 2018<br />value: 1262<br />TP_COR_RACA: Branca"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(0,192,148,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"(Branca,1)","legendgroup":"(Branca,1)","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091],"base":[2036,2540,2457,3475,3449,4156,4884,4885,5934,7194],"x":[2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],"y":[4,5,19,20,15,13,9,28,30,38],"text":["ANO_CENSO_SUP: 2009<br />value:    4<br />TP_COR_RACA: Indígena<br />ANO_CENSO_SUP: 2009<br />value:    4<br />TP_COR_RACA: Indígena","ANO_CENSO_SUP: 2010<br />value:    5<br />TP_COR_RACA: Indígena<br />ANO_CENSO_SUP: 2010<br />value:    5<br />TP_COR_RACA: Indígena","ANO_CENSO_SUP: 2011<br />value:   19<br />TP_COR_RACA: Indígena<br />ANO_CENSO_SUP: 2011<br />value:   19<br />TP_COR_RACA: Indígena","ANO_CENSO_SUP: 2012<br />value:   20<br />TP_COR_RACA: Indígena<br />ANO_CENSO_SUP: 2012<br />value:   20<br />TP_COR_RACA: Indígena","ANO_CENSO_SUP: 2013<br />value:   15<br />TP_COR_RACA: Indígena<br />ANO_CENSO_SUP: 2013<br />value:   15<br />TP_COR_RACA: Indígena","ANO_CENSO_SUP: 2014<br />value:   13<br />TP_COR_RACA: Indígena<br />ANO_CENSO_SUP: 2014<br />value:   13<br />TP_COR_RACA: Indígena","ANO_CENSO_SUP: 2015<br />value:    9<br />TP_COR_RACA: Indígena<br />ANO_CENSO_SUP: 2015<br />value:    9<br />TP_COR_RACA: Indígena","ANO_CENSO_SUP: 2016<br />value:   28<br />TP_COR_RACA: Indígena<br />ANO_CENSO_SUP: 2016<br />value:   28<br />TP_COR_RACA: Indígena","ANO_CENSO_SUP: 2017<br />value:   30<br />TP_COR_RACA: Indígena<br />ANO_CENSO_SUP: 2017<br />value:   30<br />TP_COR_RACA: Indígena","ANO_CENSO_SUP: 2018<br />value:   38<br />TP_COR_RACA: Indígena<br />ANO_CENSO_SUP: 2018<br />value:   38<br />TP_COR_RACA: Indígena"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(0,182,235,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"(Indígena,1)","legendgroup":"(Indígena,1)","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091],"base":[299,449,556,734,784,1024,1134,1434,1469,1938],"x":[2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],"y":[1737,2091,1901,2741,2665,3132,3750,3451,4465,5256],"text":["ANO_CENSO_SUP: 2009<br />value: 1737<br />TP_COR_RACA: Parda<br />ANO_CENSO_SUP: 2009<br />value: 1737<br />TP_COR_RACA: Parda","ANO_CENSO_SUP: 2010<br />value: 2091<br />TP_COR_RACA: Parda<br />ANO_CENSO_SUP: 2010<br />value: 2091<br />TP_COR_RACA: Parda","ANO_CENSO_SUP: 2011<br />value: 1901<br />TP_COR_RACA: Parda<br />ANO_CENSO_SUP: 2011<br />value: 1901<br />TP_COR_RACA: Parda","ANO_CENSO_SUP: 2012<br />value: 2741<br />TP_COR_RACA: Parda<br />ANO_CENSO_SUP: 2012<br />value: 2741<br />TP_COR_RACA: Parda","ANO_CENSO_SUP: 2013<br />value: 2665<br />TP_COR_RACA: Parda<br />ANO_CENSO_SUP: 2013<br />value: 2665<br />TP_COR_RACA: Parda","ANO_CENSO_SUP: 2014<br />value: 3132<br />TP_COR_RACA: Parda<br />ANO_CENSO_SUP: 2014<br />value: 3132<br />TP_COR_RACA: Parda","ANO_CENSO_SUP: 2015<br />value: 3750<br />TP_COR_RACA: Parda<br />ANO_CENSO_SUP: 2015<br />value: 3750<br />TP_COR_RACA: Parda","ANO_CENSO_SUP: 2016<br />value: 3451<br />TP_COR_RACA: Parda<br />ANO_CENSO_SUP: 2016<br />value: 3451<br />TP_COR_RACA: Parda","ANO_CENSO_SUP: 2017<br />value: 4465<br />TP_COR_RACA: Parda<br />ANO_CENSO_SUP: 2017<br />value: 4465<br />TP_COR_RACA: Parda","ANO_CENSO_SUP: 2018<br />value: 5256<br />TP_COR_RACA: Parda<br />ANO_CENSO_SUP: 2018<br />value: 5256<br />TP_COR_RACA: Parda"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(165,138,255,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"(Parda,1)","legendgroup":"(Parda,1)","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091],"base":[0,0,0,0,0,0,0,0,0,0],"x":[2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],"y":[299,449,556,734,784,1024,1134,1434,1469,1938],"text":["ANO_CENSO_SUP: 2009<br />value:  299<br />TP_COR_RACA: Preta<br />ANO_CENSO_SUP: 2009<br />value:  299<br />TP_COR_RACA: Preta","ANO_CENSO_SUP: 2010<br />value:  449<br />TP_COR_RACA: Preta<br />ANO_CENSO_SUP: 2010<br />value:  449<br />TP_COR_RACA: Preta","ANO_CENSO_SUP: 2011<br />value:  556<br />TP_COR_RACA: Preta<br />ANO_CENSO_SUP: 2011<br />value:  556<br />TP_COR_RACA: Preta","ANO_CENSO_SUP: 2012<br />value:  734<br />TP_COR_RACA: Preta<br />ANO_CENSO_SUP: 2012<br />value:  734<br />TP_COR_RACA: Preta","ANO_CENSO_SUP: 2013<br />value:  784<br />TP_COR_RACA: Preta<br />ANO_CENSO_SUP: 2013<br />value:  784<br />TP_COR_RACA: Preta","ANO_CENSO_SUP: 2014<br />value: 1024<br />TP_COR_RACA: Preta<br />ANO_CENSO_SUP: 2014<br />value: 1024<br />TP_COR_RACA: Preta","ANO_CENSO_SUP: 2015<br />value: 1134<br />TP_COR_RACA: Preta<br />ANO_CENSO_SUP: 2015<br />value: 1134<br />TP_COR_RACA: Preta","ANO_CENSO_SUP: 2016<br />value: 1434<br />TP_COR_RACA: Preta<br />ANO_CENSO_SUP: 2016<br />value: 1434<br />TP_COR_RACA: Preta","ANO_CENSO_SUP: 2017<br />value: 1469<br />TP_COR_RACA: Preta<br />ANO_CENSO_SUP: 2017<br />value: 1469<br />TP_COR_RACA: Preta","ANO_CENSO_SUP: 2018<br />value: 1938<br />TP_COR_RACA: Preta<br />ANO_CENSO_SUP: 2018<br />value: 1938<br />TP_COR_RACA: Preta"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(251,97,215,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"(Preta,1)","legendgroup":"(Preta,1)","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":89.8101683902756,"r":39.8505603985056,"b":80.9500604616745,"l":93.8148609381486},"font":{"color":"rgba(0,0,0,1)","family":"Roboto Condensed","size":15.2760481527605},"title":{"text":"<b> Número de concluintes em ensino superior <\/b>","font":{"color":"rgba(0,0,0,1)","family":"Roboto Condensed","size":23.9103362391034},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[2008.055,2018.945],"tickmode":"array","ticktext":["2010","2013","2016"],"tickvals":[2010,2013,2016],"categoryorder":"array","categoryarray":["2010","2013","2016"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.81901203819012,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"Roboto Condensed","size":15.2760481527605},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(204,204,204,1)","gridwidth":0.265670402656704,"zeroline":false,"anchor":"y","title":{"text":"Ano","font":{"color":"rgba(0,0,0,1)","family":"Roboto Condensed","size":11.9551681195517}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-706.3,14832.3],"tickmode":"array","ticktext":["0","5000","10000"],"tickvals":[0,5000,10000],"categoryorder":"array","categoryarray":["0","5000","10000"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.81901203819012,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"Roboto Condensed","size":15.2760481527605},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(204,204,204,1)","gridwidth":0.265670402656704,"zeroline":false,"anchor":"x","title":{"text":"Nº","font":{"color":"rgba(0,0,0,1)","family":"Roboto Condensed","size":11.9551681195517}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"Roboto Condensed","size":12.2208385222084},"y":0.905511811023622},"annotations":[{"text":"Raça/Cor","x":1.02,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(0,0,0,1)","family":"Roboto Condensed","size":15.2760481527605},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"left","yanchor":"bottom","legendTitle":true}],"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"36d45b583144":{"x":{},"y":{},"fill":{},"x.1":{},"y.1":{},"fill.1":{},"type":"bar"}},"cur_data":"36d45b583144","visdat":{"36d45b583144":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
-</div>
-<div id="concluintes-m" class="section level3">
-<h3>Concluintes (M)</h3>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div id="htmlwidget-7093cfc9b7bab645dd8a" style="width:576px;height:460.8px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-7093cfc9b7bab645dd8a">{"x":{"data":[{"orientation":"v","width":[0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091],"base":[5296,6052,4886,5038,4288,5097,5802,5925,7075,7591],"x":[2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],"y":[3172,2326,3149,2841,2392,1972,1240,868,637,316],"text":["ANO_CENSO_SUP: 2009<br />value: 3172<br />TP_COR_RACA: *NDI<br />ANO_CENSO_SUP: 2009<br />value: 3172<br />TP_COR_RACA: *NDI","ANO_CENSO_SUP: 2010<br />value: 2326<br />TP_COR_RACA: *NDI<br />ANO_CENSO_SUP: 2010<br />value: 2326<br />TP_COR_RACA: *NDI","ANO_CENSO_SUP: 2011<br />value: 3149<br />TP_COR_RACA: *NDI<br />ANO_CENSO_SUP: 2011<br />value: 3149<br />TP_COR_RACA: *NDI","ANO_CENSO_SUP: 2012<br />value: 2841<br />TP_COR_RACA: *NDI<br />ANO_CENSO_SUP: 2012<br />value: 2841<br />TP_COR_RACA: *NDI","ANO_CENSO_SUP: 2013<br />value: 2392<br />TP_COR_RACA: *NDI<br />ANO_CENSO_SUP: 2013<br />value: 2392<br />TP_COR_RACA: *NDI","ANO_CENSO_SUP: 2014<br />value: 1972<br />TP_COR_RACA: *NDI<br />ANO_CENSO_SUP: 2014<br />value: 1972<br />TP_COR_RACA: *NDI","ANO_CENSO_SUP: 2015<br />value: 1240<br />TP_COR_RACA: *NDI<br />ANO_CENSO_SUP: 2015<br />value: 1240<br />TP_COR_RACA: *NDI","ANO_CENSO_SUP: 2016<br />value:  868<br />TP_COR_RACA: *NDI<br />ANO_CENSO_SUP: 2016<br />value:  868<br />TP_COR_RACA: *NDI","ANO_CENSO_SUP: 2017<br />value:  637<br />TP_COR_RACA: *NDI<br />ANO_CENSO_SUP: 2017<br />value:  637<br />TP_COR_RACA: *NDI","ANO_CENSO_SUP: 2018<br />value:  316<br />TP_COR_RACA: *NDI<br />ANO_CENSO_SUP: 2018<br />value:  316<br />TP_COR_RACA: *NDI"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"(*NDI,1)","legendgroup":"(*NDI,1)","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091],"base":[1799,2064,1879,2642,2207,2813,3223,3242,3931,4724],"x":[2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],"y":[3497,3988,3007,2396,2081,2284,2579,2683,3144,2867],"text":["ANO_CENSO_SUP: 2009<br />value: 3497<br />TP_COR_RACA: *NQD<br />ANO_CENSO_SUP: 2009<br />value: 3497<br />TP_COR_RACA: *NQD","ANO_CENSO_SUP: 2010<br />value: 3988<br />TP_COR_RACA: *NQD<br />ANO_CENSO_SUP: 2010<br />value: 3988<br />TP_COR_RACA: *NQD","ANO_CENSO_SUP: 2011<br />value: 3007<br />TP_COR_RACA: *NQD<br />ANO_CENSO_SUP: 2011<br />value: 3007<br />TP_COR_RACA: *NQD","ANO_CENSO_SUP: 2012<br />value: 2396<br />TP_COR_RACA: *NQD<br />ANO_CENSO_SUP: 2012<br />value: 2396<br />TP_COR_RACA: *NQD","ANO_CENSO_SUP: 2013<br />value: 2081<br />TP_COR_RACA: *NQD<br />ANO_CENSO_SUP: 2013<br />value: 2081<br />TP_COR_RACA: *NQD","ANO_CENSO_SUP: 2014<br />value: 2284<br />TP_COR_RACA: *NQD<br />ANO_CENSO_SUP: 2014<br />value: 2284<br />TP_COR_RACA: *NQD","ANO_CENSO_SUP: 2015<br />value: 2579<br />TP_COR_RACA: *NQD<br />ANO_CENSO_SUP: 2015<br />value: 2579<br />TP_COR_RACA: *NQD","ANO_CENSO_SUP: 2016<br />value: 2683<br />TP_COR_RACA: *NQD<br />ANO_CENSO_SUP: 2016<br />value: 2683<br />TP_COR_RACA: *NQD","ANO_CENSO_SUP: 2017<br />value: 3144<br />TP_COR_RACA: *NQD<br />ANO_CENSO_SUP: 2017<br />value: 3144<br />TP_COR_RACA: *NQD","ANO_CENSO_SUP: 2018<br />value: 2867<br />TP_COR_RACA: *NQD<br />ANO_CENSO_SUP: 2018<br />value: 2867<br />TP_COR_RACA: *NQD"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(196,154,0,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"(*NQD,1)","legendgroup":"(*NQD,1)","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091],"base":[1789,1941,1679,2335,2060,2670,3083,3066,3796,4570],"x":[2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],"y":[10,123,200,307,147,143,140,176,135,154],"text":["ANO_CENSO_SUP: 2009<br />value:   10<br />TP_COR_RACA: Amarela<br />ANO_CENSO_SUP: 2009<br />value:   10<br />TP_COR_RACA: Amarela","ANO_CENSO_SUP: 2010<br />value:  123<br />TP_COR_RACA: Amarela<br />ANO_CENSO_SUP: 2010<br />value:  123<br />TP_COR_RACA: Amarela","ANO_CENSO_SUP: 2011<br />value:  200<br />TP_COR_RACA: Amarela<br />ANO_CENSO_SUP: 2011<br />value:  200<br />TP_COR_RACA: Amarela","ANO_CENSO_SUP: 2012<br />value:  307<br />TP_COR_RACA: Amarela<br />ANO_CENSO_SUP: 2012<br />value:  307<br />TP_COR_RACA: Amarela","ANO_CENSO_SUP: 2013<br />value:  147<br />TP_COR_RACA: Amarela<br />ANO_CENSO_SUP: 2013<br />value:  147<br />TP_COR_RACA: Amarela","ANO_CENSO_SUP: 2014<br />value:  143<br />TP_COR_RACA: Amarela<br />ANO_CENSO_SUP: 2014<br />value:  143<br />TP_COR_RACA: Amarela","ANO_CENSO_SUP: 2015<br />value:  140<br />TP_COR_RACA: Amarela<br />ANO_CENSO_SUP: 2015<br />value:  140<br />TP_COR_RACA: Amarela","ANO_CENSO_SUP: 2016<br />value:  176<br />TP_COR_RACA: Amarela<br />ANO_CENSO_SUP: 2016<br />value:  176<br />TP_COR_RACA: Amarela","ANO_CENSO_SUP: 2017<br />value:  135<br />TP_COR_RACA: Amarela<br />ANO_CENSO_SUP: 2017<br />value:  135<br />TP_COR_RACA: Amarela","ANO_CENSO_SUP: 2018<br />value:  154<br />TP_COR_RACA: Amarela<br />ANO_CENSO_SUP: 2018<br />value:  154<br />TP_COR_RACA: Amarela"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(83,180,0,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"(Amarela,1)","legendgroup":"(Amarela,1)","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091],"base":[1409,1490,1296,1895,1678,2263,2626,2574,3171,3794],"x":[2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],"y":[380,451,383,440,382,407,457,492,625,776],"text":["ANO_CENSO_SUP: 2009<br />value:  380<br />TP_COR_RACA: Branca<br />ANO_CENSO_SUP: 2009<br />value:  380<br />TP_COR_RACA: Branca","ANO_CENSO_SUP: 2010<br />value:  451<br />TP_COR_RACA: Branca<br />ANO_CENSO_SUP: 2010<br />value:  451<br />TP_COR_RACA: Branca","ANO_CENSO_SUP: 2011<br />value:  383<br />TP_COR_RACA: Branca<br />ANO_CENSO_SUP: 2011<br />value:  383<br />TP_COR_RACA: Branca","ANO_CENSO_SUP: 2012<br />value:  440<br />TP_COR_RACA: Branca<br />ANO_CENSO_SUP: 2012<br />value:  440<br />TP_COR_RACA: Branca","ANO_CENSO_SUP: 2013<br />value:  382<br />TP_COR_RACA: Branca<br />ANO_CENSO_SUP: 2013<br />value:  382<br />TP_COR_RACA: Branca","ANO_CENSO_SUP: 2014<br />value:  407<br />TP_COR_RACA: Branca<br />ANO_CENSO_SUP: 2014<br />value:  407<br />TP_COR_RACA: Branca","ANO_CENSO_SUP: 2015<br />value:  457<br />TP_COR_RACA: Branca<br />ANO_CENSO_SUP: 2015<br />value:  457<br />TP_COR_RACA: Branca","ANO_CENSO_SUP: 2016<br />value:  492<br />TP_COR_RACA: Branca<br />ANO_CENSO_SUP: 2016<br />value:  492<br />TP_COR_RACA: Branca","ANO_CENSO_SUP: 2017<br />value:  625<br />TP_COR_RACA: Branca<br />ANO_CENSO_SUP: 2017<br />value:  625<br />TP_COR_RACA: Branca","ANO_CENSO_SUP: 2018<br />value:  776<br />TP_COR_RACA: Branca<br />ANO_CENSO_SUP: 2018<br />value:  776<br />TP_COR_RACA: Branca"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(0,192,148,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"(Branca,1)","legendgroup":"(Branca,1)","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091],"base":[1401,1479,1290,1881,1669,2250,2610,2561,3139,3770],"x":[2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],"y":[8,11,6,14,9,13,16,13,32,24],"text":["ANO_CENSO_SUP: 2009<br />value:    8<br />TP_COR_RACA: Indígena<br />ANO_CENSO_SUP: 2009<br />value:    8<br />TP_COR_RACA: Indígena","ANO_CENSO_SUP: 2010<br />value:   11<br />TP_COR_RACA: Indígena<br />ANO_CENSO_SUP: 2010<br />value:   11<br />TP_COR_RACA: Indígena","ANO_CENSO_SUP: 2011<br />value:    6<br />TP_COR_RACA: Indígena<br />ANO_CENSO_SUP: 2011<br />value:    6<br />TP_COR_RACA: Indígena","ANO_CENSO_SUP: 2012<br />value:   14<br />TP_COR_RACA: Indígena<br />ANO_CENSO_SUP: 2012<br />value:   14<br />TP_COR_RACA: Indígena","ANO_CENSO_SUP: 2013<br />value:    9<br />TP_COR_RACA: Indígena<br />ANO_CENSO_SUP: 2013<br />value:    9<br />TP_COR_RACA: Indígena","ANO_CENSO_SUP: 2014<br />value:   13<br />TP_COR_RACA: Indígena<br />ANO_CENSO_SUP: 2014<br />value:   13<br />TP_COR_RACA: Indígena","ANO_CENSO_SUP: 2015<br />value:   16<br />TP_COR_RACA: Indígena<br />ANO_CENSO_SUP: 2015<br />value:   16<br />TP_COR_RACA: Indígena","ANO_CENSO_SUP: 2016<br />value:   13<br />TP_COR_RACA: Indígena<br />ANO_CENSO_SUP: 2016<br />value:   13<br />TP_COR_RACA: Indígena","ANO_CENSO_SUP: 2017<br />value:   32<br />TP_COR_RACA: Indígena<br />ANO_CENSO_SUP: 2017<br />value:   32<br />TP_COR_RACA: Indígena","ANO_CENSO_SUP: 2018<br />value:   24<br />TP_COR_RACA: Indígena<br />ANO_CENSO_SUP: 2018<br />value:   24<br />TP_COR_RACA: Indígena"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(0,182,235,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"(Indígena,1)","legendgroup":"(Indígena,1)","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091],"base":[202,261,291,424,394,558,679,773,873,1093],"x":[2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],"y":[1199,1218,999,1457,1275,1692,1931,1788,2266,2677],"text":["ANO_CENSO_SUP: 2009<br />value: 1199<br />TP_COR_RACA: Parda<br />ANO_CENSO_SUP: 2009<br />value: 1199<br />TP_COR_RACA: Parda","ANO_CENSO_SUP: 2010<br />value: 1218<br />TP_COR_RACA: Parda<br />ANO_CENSO_SUP: 2010<br />value: 1218<br />TP_COR_RACA: Parda","ANO_CENSO_SUP: 2011<br />value:  999<br />TP_COR_RACA: Parda<br />ANO_CENSO_SUP: 2011<br />value:  999<br />TP_COR_RACA: Parda","ANO_CENSO_SUP: 2012<br />value: 1457<br />TP_COR_RACA: Parda<br />ANO_CENSO_SUP: 2012<br />value: 1457<br />TP_COR_RACA: Parda","ANO_CENSO_SUP: 2013<br />value: 1275<br />TP_COR_RACA: Parda<br />ANO_CENSO_SUP: 2013<br />value: 1275<br />TP_COR_RACA: Parda","ANO_CENSO_SUP: 2014<br />value: 1692<br />TP_COR_RACA: Parda<br />ANO_CENSO_SUP: 2014<br />value: 1692<br />TP_COR_RACA: Parda","ANO_CENSO_SUP: 2015<br />value: 1931<br />TP_COR_RACA: Parda<br />ANO_CENSO_SUP: 2015<br />value: 1931<br />TP_COR_RACA: Parda","ANO_CENSO_SUP: 2016<br />value: 1788<br />TP_COR_RACA: Parda<br />ANO_CENSO_SUP: 2016<br />value: 1788<br />TP_COR_RACA: Parda","ANO_CENSO_SUP: 2017<br />value: 2266<br />TP_COR_RACA: Parda<br />ANO_CENSO_SUP: 2017<br />value: 2266<br />TP_COR_RACA: Parda","ANO_CENSO_SUP: 2018<br />value: 2677<br />TP_COR_RACA: Parda<br />ANO_CENSO_SUP: 2018<br />value: 2677<br />TP_COR_RACA: Parda"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(165,138,255,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"(Parda,1)","legendgroup":"(Parda,1)","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091],"base":[0,0,0,0,0,0,0,0,0,0],"x":[2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],"y":[202,261,291,424,394,558,679,773,873,1093],"text":["ANO_CENSO_SUP: 2009<br />value:  202<br />TP_COR_RACA: Preta<br />ANO_CENSO_SUP: 2009<br />value:  202<br />TP_COR_RACA: Preta","ANO_CENSO_SUP: 2010<br />value:  261<br />TP_COR_RACA: Preta<br />ANO_CENSO_SUP: 2010<br />value:  261<br />TP_COR_RACA: Preta","ANO_CENSO_SUP: 2011<br />value:  291<br />TP_COR_RACA: Preta<br />ANO_CENSO_SUP: 2011<br />value:  291<br />TP_COR_RACA: Preta","ANO_CENSO_SUP: 2012<br />value:  424<br />TP_COR_RACA: Preta<br />ANO_CENSO_SUP: 2012<br />value:  424<br />TP_COR_RACA: Preta","ANO_CENSO_SUP: 2013<br />value:  394<br />TP_COR_RACA: Preta<br />ANO_CENSO_SUP: 2013<br />value:  394<br />TP_COR_RACA: Preta","ANO_CENSO_SUP: 2014<br />value:  558<br />TP_COR_RACA: Preta<br />ANO_CENSO_SUP: 2014<br />value:  558<br />TP_COR_RACA: Preta","ANO_CENSO_SUP: 2015<br />value:  679<br />TP_COR_RACA: Preta<br />ANO_CENSO_SUP: 2015<br />value:  679<br />TP_COR_RACA: Preta","ANO_CENSO_SUP: 2016<br />value:  773<br />TP_COR_RACA: Preta<br />ANO_CENSO_SUP: 2016<br />value:  773<br />TP_COR_RACA: Preta","ANO_CENSO_SUP: 2017<br />value:  873<br />TP_COR_RACA: Preta<br />ANO_CENSO_SUP: 2017<br />value:  873<br />TP_COR_RACA: Preta","ANO_CENSO_SUP: 2018<br />value: 1093<br />TP_COR_RACA: Preta<br />ANO_CENSO_SUP: 2018<br />value: 1093<br />TP_COR_RACA: Preta"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(251,97,215,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"(Preta,1)","legendgroup":"(Preta,1)","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":89.8101683902756,"r":39.8505603985056,"b":80.9500604616745,"l":86.1768368617684},"font":{"color":"rgba(0,0,0,1)","family":"Roboto Condensed","size":15.2760481527605},"title":{"text":"<b> Número de concluintes em ensino superior <\/b>","font":{"color":"rgba(0,0,0,1)","family":"Roboto Condensed","size":23.9103362391034},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[2008.055,2018.945],"tickmode":"array","ticktext":["2010","2013","2016"],"tickvals":[2010,2013,2016],"categoryorder":"array","categoryarray":["2010","2013","2016"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.81901203819012,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"Roboto Condensed","size":15.2760481527605},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(204,204,204,1)","gridwidth":0.265670402656704,"zeroline":false,"anchor":"y","title":{"text":"Ano","font":{"color":"rgba(0,0,0,1)","family":"Roboto Condensed","size":11.9551681195517}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-423.4,8891.4],"tickmode":"array","ticktext":["0","2000","4000","6000","8000"],"tickvals":[0,2000,4000,6000,8000],"categoryorder":"array","categoryarray":["0","2000","4000","6000","8000"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.81901203819012,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"Roboto Condensed","size":15.2760481527605},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(204,204,204,1)","gridwidth":0.265670402656704,"zeroline":false,"anchor":"x","title":{"text":"Nº","font":{"color":"rgba(0,0,0,1)","family":"Roboto Condensed","size":11.9551681195517}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"Roboto Condensed","size":12.2208385222084},"y":0.905511811023622},"annotations":[{"text":"Raça/Cor","x":1.02,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(0,0,0,1)","family":"Roboto Condensed","size":15.2760481527605},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"left","yanchor":"bottom","legendTitle":true}],"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"36d45447bd54":{"x":{},"y":{},"fill":{},"x.1":{},"y.1":{},"fill.1":{},"type":"bar"}},"cur_data":"36d45447bd54","visdat":{"36d45447bd54":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-2acd54b63b72994ad4d8" style="width:576px;height:460.8px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2acd54b63b72994ad4d8">{"x":{"data":[{"orientation":"v","width":[0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091],"base":[0,0,0,0,0,0,0,0,0,0],"x":[2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],"y":[299,449,556,734,784,1024,1134,1434,1469,1938],"text":["ANO_CENSO_SUP: 2009<br />value:  299","ANO_CENSO_SUP: 2010<br />value:  449","ANO_CENSO_SUP: 2011<br />value:  556","ANO_CENSO_SUP: 2012<br />value:  734","ANO_CENSO_SUP: 2013<br />value:  784","ANO_CENSO_SUP: 2014<br />value: 1024","ANO_CENSO_SUP: 2015<br />value: 1134","ANO_CENSO_SUP: 2016<br />value: 1434","ANO_CENSO_SUP: 2017<br />value: 1469","ANO_CENSO_SUP: 2018<br />value: 1938"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(0,196,204,1)","line":{"width":1.88976377952756,"color":"rgba(250,193,19,1)"}},"showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":44.2765715523309,"r":7.30593607305936,"b":71.2487591820528,"l":98.6301369863014},"plot_bgcolor":"transparent","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"title":{"text":"Número de concluintes em ensino superior - Sexo Feminino e Raça/Cor Preta","font":{"color":"rgba(219,68,112,1)","family":"","size":19.1282689912827},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[2008.055,2018.945],"tickmode":"array","ticktext":["2010","2013","2016"],"tickvals":[2010,2013,2016],"categoryorder":"array","categoryarray":["2010","2013","2016"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":29.2237442922374},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(179,179,179,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"Ano","font":{"color":"rgba(219,68,112,1)","family":"","size":29.2237442922374}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-96.9,2034.9],"tickmode":"array","ticktext":["0","500","1000","1500","2000"],"tickvals":[0,500,1000,1500,2000],"categoryorder":"array","categoryarray":["0","500","1000","1500","2000"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":29.2237442922374},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(179,179,179,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"Nº","font":{"color":"rgba(219,68,112,1)","family":"","size":29.2237442922374}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(100,210,170,1)","width":2.65670402656704,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":29.2237442922374}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"50d31c7d20fb":{"x":{},"y":{},"type":"bar"}},"cur_data":"50d31c7d20fb","visdat":{"50d31c7d20fb":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 
@@ -2720,36 +2688,14 @@ $(document).ready(function () {
 title: " Ensino Superior "
 output: 
   flexdashboard::flex_dashboard:
+    logo: figure/reconhecendosalvador.gif
+    css: style.css
+    social: menu
     orientation: columns
     vertical_layout: fill
     source_code: embed
 ---
 
-<style>
-.navbar {
-  background-color:#acdfdd;
-}
-
-.navbar-inverse .navbar-nav > li > a:hover,
-.navbar-inverse .navbar-nav > li > a:focus {
-    background-color: yellow;
-    color: black;
-}
-.navbar-inverse .navbar-nav > .active > a,
-.navbar-inverse .navbar-nav > .active > a:hover,
-.navbar-inverse .navbar-nav > .active > a:focus {
-  color: white;
-  background-color: yellow;
-}
-.navbar-inverse .navbar-toggle:hover,
-.navbar-inverse .navbar-toggle:focus {
-  background-color: yellow;
-}
-.navbar-inverse .navbar-collapse,
-.navbar-inverse .navbar-form {
-  border-color: yellow;
-}
-</style>
 
 
 ```{r setup, include=FALSE}
@@ -2770,6 +2716,7 @@ library("hrbrthemes")
 library("waffle")
 library(ggthemes)
 library(extrafont)
+library(gganimate)
 
 CENSO_SUP <- NULL
 CENSO_SUP <- read_delim("data/educacao/CENSO_SUPERIOR/DM_ALUNO_2009_2018_CO_IES_by_ANO_TP_COR_RACA_TP_SEXO.csv",",",escape_double = FALSE,trim_ws = FALSE)
@@ -2804,7 +2751,8 @@ Column {data-width=300}
 
 ```{r}
 Sexo_Feminino <- CONCLUINTES_SSA %>% filter(TP_SEXO %in% c("F")) %>% summarise(valor=sum(value))
-valueBox(Sexo_Feminino, icon = "fa-pencil",href="#concluintes-f")
+valueBox(Sexo_Feminino, icon = "fa-pencil",href="#concluintes-f",
+         color = "#fac113")
 ```
 
 ### Concluintes do Sexo Masculino
@@ -2820,65 +2768,49 @@ valueBox(Sexo_Masculino, icon = "fa-pencil", href="#concluintes-m")
 Total <- CONCLUINTES_SSA %>% summarise(valor=sum(value))
 valueBox(Total, 
          icon = "fa-child",
-         color = ifelse(Total > 10, "warning", "primary"))
+         color = ifelse(Total > 3000000, "warning", "#db4470"))
 ```
 
-Column {data-width=1000 .tabset .tabset-fade}
+Column {data-width=800 .tabset .tabset-fade}
 -------------------------------------   
 
 ### Concluintes (F)
 
 ```{r, eval=TRUE}
 
-objeto <- CONCLUINTES_SSA %>% filter(TP_SEXO %in% c("F")) %>% group_by(ANO_CENSO_SUP,TP_COR_RACA) %>% summarise(value =sum(value)) %>%
-ggplot(aes(x=ANO_CENSO_SUP,y=value,fill = TP_COR_RACA)) +
-  geom_bar(aes(x=ANO_CENSO_SUP,y=value,fill = TP_COR_RACA),stat = "identity") + 
+objeto <- CONCLUINTES_SSA %>% filter(TP_COR_RACA %in% c("Preta")) %>% filter(TP_SEXO %in% c("F")) %>% group_by(ANO_CENSO_SUP) %>% summarise(value =sum(value)) %>%
+ggplot(aes(x=ANO_CENSO_SUP,y=value)) +
+  geom_bar(stat = "identity",fill="#00c4cc",color="#fac113") + 
   labs(
-    title = "Número de concluintes em ensino superior",
-    subtitle = "Desagregado por raça/cor",
+    title = "Número de concluintes em ensino superior - Sexo Feminino e Raça/Cor Preta",
     x = "Ano",
-    y = "Nº",
-    fill = "Raça/Cor"
+    y = "Nº"
   ) +
-  theme(legend.text = element_text(size = 14)) +
-  theme(legend.title = element_text(size = 16)) +
-  theme(legend.position = "none") +
-  scale_color_ipsum() +
-  theme_ipsum_rc()
+  theme(title = element_text(size = 12,colour = "#db4470"))+
+    theme(axis.title.x=element_text(size=22)) +
+    theme(axis.title.y=element_text(size=22)) +
+  theme(legend.text = element_text(size = 22)) +
+    theme(axis.text = element_text(size = 22))  +
+  theme(legend.position = "none")+
+  theme(panel.grid = element_blank(), axis.ticks.y = element_line())+
+#  theme( axis.line = element_line(colour = "darkblue", 
+#                      size = 1, linetype = "solid"))+
+  theme(panel.border = element_rect(fill=NA, color = "#64D2AA", size = 2))+
+  theme(panel.background = element_rect(fill=NA,color = "gray70", size = 2),
+        panel.grid.major = element_line(color = "gray70", size = .5),
+        panel.grid.minor = element_line(color = "gray70", size = .25))
+  
+     #theme(plot.background = element_rect(fill = "#db4470"))
+  
+  #scale_color_ipsum() +
+  #theme_ipsum_rc()
   #theme_minimal(base_family = "Roboto Condensed") +
   #theme(panel.grid = element_blank(), axis.ticks.y = element_line()) +
   #guides(fill = guide_legend(reverse = TRUE))
-
 ggplotly(objeto)
 
 ```
 
-
-
-### Concluintes (M)
-
-```{r, eval=TRUE}
-
-
-objeto <- CONCLUINTES_SSA %>% filter(TP_SEXO %in% c("M")) %>% group_by(ANO_CENSO_SUP,TP_COR_RACA) %>% summarise(value =sum(value)) %>%
-ggplot(aes(x=ANO_CENSO_SUP,y=value,fill = TP_COR_RACA)) +
-  geom_bar(aes(x=ANO_CENSO_SUP,y=value,fill = TP_COR_RACA),stat = "identity") + 
-  labs(
-    title = "Número de concluintes em ensino superior",
-    subtitle = "Desagregado por raça/cor",
-    x = "Ano",
-    y = "Nº",
-    fill = "Raça/Cor"
-  ) +
-  scale_color_ipsum() +
-  theme_ipsum_rc()
-  #theme_minimal(base_family = "Roboto Condensed") +
-  #theme(panel.grid = element_blank(), axis.ticks.y = element_line()) +
-  #guides(fill = guide_legend(reverse = TRUE))
-
-ggplotly(objeto)
-
-```
 
 
 </code></pre>
