@@ -65,7 +65,8 @@ Column {data-width=300}
 
 ```{r}
 Sexo_Feminino <- CONCLUINTES_SSA %>% filter(TP_SEXO %in% c("F")) %>% summarise(valor=sum(value))
-valueBox(Sexo_Feminino, icon = "fa-pencil",href="#concluintes-f")
+valueBox(Sexo_Feminino, icon = "fa-pencil",href="#concluintes-f",
+         color = "#fac113")
 ```
 
 ### Concluintes do Sexo Masculino
@@ -81,10 +82,10 @@ valueBox(Sexo_Masculino, icon = "fa-pencil", href="#concluintes-m")
 Total <- CONCLUINTES_SSA %>% summarise(valor=sum(value))
 valueBox(Total, 
          icon = "fa-child",
-         color = ifelse(Total > 10, "warning", "primary"))
+         color = ifelse(Total > 3000000, "warning", "#db4470"))
 ```
 
-Column {data-width=1000 .tabset .tabset-fade}
+Column {data-width=800 .tabset .tabset-fade}
 -------------------------------------   
 
 ### Concluintes (F)
@@ -95,15 +96,14 @@ objeto <- CONCLUINTES_SSA %>% filter(TP_COR_RACA %in% c("Preta")) %>% filter(TP_
 ggplot(aes(x=ANO_CENSO_SUP,y=value)) +
   geom_bar(stat = "identity",fill="#00c4cc",color="#fac113") + 
   labs(
-    title = "Número de concluintes em ensino superior",
-    subtitle = "Sexo Feminino e Raça/Cor Preta",
+    title = "Número de concluintes em ensino superior - Sexo Feminino e Raça/Cor Preta",
     x = "Ano",
     y = "Nº"
   ) +
+  theme(title = element_text(size = 12,colour = "#db4470"))+
     theme(axis.title.x=element_text(size=22)) +
     theme(axis.title.y=element_text(size=22)) +
   theme(legend.text = element_text(size = 22)) +
-  theme(legend.title = element_text(size = 26)) +
     theme(axis.text = element_text(size = 22))  +
   theme(legend.position = "none")+
   theme(panel.grid = element_blank(), axis.ticks.y = element_line())+
