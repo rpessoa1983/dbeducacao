@@ -60,6 +60,11 @@ HEAT_SSA_IES_SEXO_RACA_S_NQD_NDI <- HEAT_SSA_IES_SEXO_RACA %>%  filter(TP_COR_RA
 Column {data-width=300}
 -------------------------------------
 
+O número de concluintes do sexo feminino 
+e raça/cor negra está disponível no gráfico 
+de barras ao lado. Enquanto a total de 
+concluintes desagregados por sexo 
+são apresentados nos cartões abaixo.
 
 ### Concluintes do Sexo Feminino
 
@@ -85,18 +90,18 @@ valueBox(Total,
          color = ifelse(Total > 3000000, "warning", "#db4470"))
 ```
 
-Column {data-width=800 .tabset .tabset-fade}
+Column {data-width=800}
 -------------------------------------   
 
-### Concluintes (F)
+### <font size="5"> **Nº de concluintes em ensino superior - Sexo Feminino e Raça/Cor Preta** </font>
 
-```{r, eval=TRUE}
+```{r, eval=TRUE, fig.height=4, fig.width=3}
 
 objeto <- CONCLUINTES_SSA %>% filter(TP_COR_RACA %in% c("Preta")) %>% filter(TP_SEXO %in% c("F")) %>% group_by(ANO_CENSO_SUP) %>% summarise(value =sum(value)) %>%
 ggplot(aes(x=ANO_CENSO_SUP,y=value)) +
   geom_bar(stat = "identity",fill="#00c4cc",color="#fac113") + 
   labs(
-    title = "Número de concluintes em ensino superior - Sexo Feminino e Raça/Cor Preta",
+    title = "",
     x = "Ano",
     y = "Nº"
   ) +
