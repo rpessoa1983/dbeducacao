@@ -60,10 +60,10 @@ HEAT_SSA_IES_SEXO_RACA_S_NQD_NDI <- HEAT_SSA_IES_SEXO_RACA %>%  filter(TP_COR_RA
 Column {data-width=300}
 -------------------------------------
 
-O número de concluintes do sexo feminino 
-e raça/cor negra está disponível no gráfico 
+O número de concluintes do sexo feminino (biológico - definição IBGE) 
+e raça/cor (definição IBGE) preta está disponível no gráfico 
 de barras ao lado. Enquanto a total de 
-concluintes desagregados por sexo 
+concluintes (2009-2019) desagregados por sexo 
 são apresentados nos cartões abaixo.
 
 ### Concluintes do Sexo Feminino
