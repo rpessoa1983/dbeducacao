@@ -25,15 +25,3 @@
   border-color: yellow;
 }
 
-/* turn off revealjs default fat black image border */
-.reveal section img {
-  border: 0;
-}
-
-/* increase padding in code regions */
-.reveal pre code {
-  padding: 15px;
-}
-
-
-
