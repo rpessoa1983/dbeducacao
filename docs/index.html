@@ -38,12 +38,10 @@ window.FlexDashboardComponents = [];
 <link href="site_libs/prism-1.4.1/prism.css" rel="stylesheet" />
 <script src="site_libs/prism-1.4.1/prism.js"></script>
 <script src="site_libs/htmlwidgets-1.5.2/htmlwidgets.js"></script>
-<script src="site_libs/plotly-binding-4.9.2.1/plotly.js"></script>
-<script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
-<link href="site_libs/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
-<script src="site_libs/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
-<link href="site_libs/plotly-htmlwidgets-css-1.52.2/plotly-htmlwidgets.css" rel="stylesheet" />
-<script src="site_libs/plotly-main-1.52.2/plotly-latest.min.js"></script>
+<script src="site_libs/echarts4r-4.8.0/echarts-en.min.js"></script>
+<script src="site_libs/echarts4r-4.8.0/ecStat.min.js"></script>
+<script src="site_libs/echarts4r-4.8.0/dataTool.min.js"></script>
+<script src="site_libs/echarts4r-binding-0.3.3/echarts4r.js"></script>
 <style type="text/css">
 
 /*
@@ -2661,8 +2659,8 @@ window.FlexDashboardComponents.push({
 <div class="knitr-options" data-fig-width="288" data-fig-height="384">
 
 </div>
-<div id="htmlwidget-fad16f28727eb659ab89" style="width:288px;height:384px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-fad16f28727eb659ab89">{"x":{"data":[{"orientation":"v","width":[0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091,0.900000000000091],"base":[0,0,0,0,0,0,0,0,0,0],"x":[2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],"y":[20433,20758,20255,20190,17639,18197,19092,19151,20996,22033],"text":["ANO_CENSO_SUP: 2009<br />value: 20433","ANO_CENSO_SUP: 2010<br />value: 20758","ANO_CENSO_SUP: 2011<br />value: 20255","ANO_CENSO_SUP: 2012<br />value: 20190","ANO_CENSO_SUP: 2013<br />value: 17639","ANO_CENSO_SUP: 2014<br />value: 18197","ANO_CENSO_SUP: 2015<br />value: 19092","ANO_CENSO_SUP: 2016<br />value: 19151","ANO_CENSO_SUP: 2017<br />value: 20996","ANO_CENSO_SUP: 2018<br />value: 22033"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(0,196,204,1)","line":{"width":1.88976377952756,"color":"rgba(250,193,19,1)"}},"showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":21.4794520547945,"r":7.30593607305936,"b":67.5799086757991,"l":113.24200913242},"plot_bgcolor":"transparent","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[2008.055,2018.945],"tickmode":"array","ticktext":["2010","2013","2016"],"tickvals":[2010,2013,2016],"categoryorder":"array","categoryarray":["2010","2013","2016"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":29.2237442922374},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(179,179,179,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"Ano","font":{"color":"rgba(219,68,112,1)","family":"","size":29.2237442922374}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-1101.65,23134.65],"tickmode":"array","ticktext":["0","5000","10000","15000","20000"],"tickvals":[0,5000,10000,15000,20000],"categoryorder":"array","categoryarray":["0","5000","10000","15000","20000"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":29.2237442922374},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(179,179,179,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"Nº","font":{"color":"rgba(219,68,112,1)","family":"","size":29.2237442922374}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(100,210,170,1)","width":2.65670402656704,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":29.2237442922374}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"70be985d86c":{"x":{},"y":{},"type":"bar"}},"cur_data":"70be985d86c","visdat":{"70be985d86c":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-ab60cdbdc92e0471bb5d" style="width:100%;height:500px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ab60cdbdc92e0471bb5d">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"yAxis":[{"show":true,"splitLine":{"show":false},"axisLabel":{"formatter":" {value} "},"name":""}],"xAxis":[{"data":["2009","2010","2011","2012","2013","2014","2015","2016","2017","2018"],"type":"category","boundaryGap":true,"show":true,"name":""}],"series":[{"data":[{"value":["2009","11965"]},{"value":["2010","12380"]},{"value":["2011","12220"]},{"value":["2012","12311"]},{"value":["2013","10959"]},{"value":["2014","11128"]},{"value":["2015","12050"]},{"value":["2016","12358"]},{"value":["2017","13284"]},{"value":["2018","14126"]}],"name":"Nº Concluintes","type":"bar","yAxisIndex":0,"xAxisIndex":0,"coordinateSystem":"cartesian2d","label":{"show":true,"position":"top"}}],"tooltip":{"trigger":"axis","axisPointer":{"type":"cross"},"textStyle":{"fontFamily":"arial","fontSize":12}},"title":[{"text":"Sexo Feminino","subtext":"Total"}],"color":["#00c4cc","#db4470"],"backgroundColor":"#ffffff","toolbox":{"feature":{"dataView":{"title":"Ver dados"},"dataZoom":[]}}},"dispose":true},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 
@@ -2718,6 +2716,13 @@ library("waffle")
 library(ggthemes)
 library(extrafont)
 library(gganimate)
+
+
+library(echarts4r) # charts
+library(tidyverse) # general use
+library(lubridate) # dates and times
+library(prophet) # forecasting
+
 
 CENSO_SUP <- NULL
 CENSO_SUP <- read_delim("data/educacao/CENSO_SUPERIOR/DM_ALUNO_2009_2018_CO_IES_by_ANO_TP_COR_RACA_TP_SEXO.csv",",",escape_double = FALSE,trim_ws = FALSE)
@@ -2783,36 +2788,33 @@ Column {data-width=800}
 
 ```{r, eval=TRUE, fig.height=4, fig.width=3}
 
-objeto <- CONCLUINTES_SSA %>%  group_by(ANO_CENSO_SUP) %>% summarise(value =sum(value)) %>%
-ggplot(aes(x=ANO_CENSO_SUP,y=value)) +
-  geom_bar(stat = "identity",fill="#00c4cc",color="#fac113") + 
-  labs(
-    title = "",
-    x = "Ano",
-    y = "Nº"
-  ) +
-  theme(title = element_text(size = 12,colour = "#db4470"))+
-    theme(axis.title.x=element_text(size=22)) +
-    theme(axis.title.y=element_text(size=22)) +
-  theme(legend.text = element_text(size = 22)) +
-    theme(axis.text = element_text(size = 22))  +
-  theme(legend.position = "none")+
-  theme(panel.grid = element_blank(), axis.ticks.y = element_line())+
-#  theme( axis.line = element_line(colour = "darkblue", 
-#                      size = 1, linetype = "solid"))+
-  theme(panel.border = element_rect(fill=NA, color = "#64D2AA", size = 2))+
-  theme(panel.background = element_rect(fill=NA,color = "gray70", size = 2),
-        panel.grid.major = element_line(color = "gray70", size = .5),
-        panel.grid.minor = element_line(color = "gray70", size = .25))
-  
-     #theme(plot.background = element_rect(fill = "#db4470"))
-  
-  #scale_color_ipsum() +
-  #theme_ipsum_rc()
-  #theme_minimal(base_family = "Roboto Condensed") +
-  #theme(panel.grid = element_blank(), axis.ticks.y = element_line()) +
-  #guides(fill = guide_legend(reverse = TRUE))
-ggplotly(objeto)
+CONCLUINTES_SSA %>% filter(TP_SEXO %in% c("F")) %>% group_by(ANO_CENSO_SUP) %>% summarise(value =sum(value)) %>% mutate(ANO_CENSO_SUP=as.character(ANO_CENSO_SUP)) %>%
+  e_charts(x = ANO_CENSO_SUP) %>%   #,width = "100%", height = "200px") %>%
+  e_bar(value,legend = FALSE, name = "Nº Concluintes") %>% 
+  #e_labels(position = "right") %>% 
+  e_labels(position = "top") %>% 
+  e_tooltip() %>% 
+  e_title("Sexo Feminino", "Total") %>% 
+ # e_flip_coords() %>% 
+  e_y_axis(splitLine = list(show = FALSE),formatter = e_axis_formatter("decimal", locale = "pt-br")) %>% 
+  #e_x_axis(show = FALSE) %>%
+  e_x_axis(show = TRUE) %>%
+  e_color(
+    c("#00c4cc", "#db4470"),
+    "#ffffff"
+  ) %>%  e_toolbox_feature(
+    feature = "dataView",
+    title = "Ver dados"
+  ) %>% 
+e_axis_labels(x ="",y= "") %>%
+  e_tooltip(trigger="axis",
+            axisPointer = list(
+              type = "cross"),
+            textStyle=list(fontFamily="arial",
+                           fontSize=12)) %>%
+  e_toolbox_feature(feature = "dataZoom") %>%  
+  e_format_y_axis(suffix = "")  
+
 
 ```
 

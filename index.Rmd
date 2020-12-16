@@ -32,6 +32,13 @@ library(ggthemes)
 library(extrafont)
 library(gganimate)
 
+
+library(echarts4r) # charts
+library(tidyverse) # general use
+library(lubridate) # dates and times
+library(prophet) # forecasting
+
+
 CENSO_SUP <- NULL
 CENSO_SUP <- read_delim("data/educacao/CENSO_SUPERIOR/DM_ALUNO_2009_2018_CO_IES_by_ANO_TP_COR_RACA_TP_SEXO.csv",",",escape_double = FALSE,trim_ws = FALSE)
 #CENSO_SUP$TP_SEXO <- ifelse(CENSO_SUP$TP_SEXO==1,"Feminino","Masculino")
@@ -96,36 +103,33 @@ Column {data-width=800}
 
 ```{r, eval=TRUE, fig.height=4, fig.width=3}
 
-objeto <- CONCLUINTES_SSA %>%  group_by(ANO_CENSO_SUP) %>% summarise(value =sum(value)) %>%
-ggplot(aes(x=ANO_CENSO_SUP,y=value)) +
-  geom_bar(stat = "identity",fill="#00c4cc",color="#fac113") + 
-  labs(
-    title = "",
-    x = "Ano",
-    y = "Nº"
-  ) +
-  theme(title = element_text(size = 12,colour = "#db4470"))+
-    theme(axis.title.x=element_text(size=22)) +
-    theme(axis.title.y=element_text(size=22)) +
-  theme(legend.text = element_text(size = 22)) +
-    theme(axis.text = element_text(size = 22))  +
-  theme(legend.position = "none")+
-  theme(panel.grid = element_blank(), axis.ticks.y = element_line())+
-#  theme( axis.line = element_line(colour = "darkblue", 
-#                      size = 1, linetype = "solid"))+
-  theme(panel.border = element_rect(fill=NA, color = "#64D2AA", size = 2))+
-  theme(panel.background = element_rect(fill=NA,color = "gray70", size = 2),
-        panel.grid.major = element_line(color = "gray70", size = .5),
-        panel.grid.minor = element_line(color = "gray70", size = .25))
-  
-     #theme(plot.background = element_rect(fill = "#db4470"))
-  
-  #scale_color_ipsum() +
-  #theme_ipsum_rc()
-  #theme_minimal(base_family = "Roboto Condensed") +
-  #theme(panel.grid = element_blank(), axis.ticks.y = element_line()) +
-  #guides(fill = guide_legend(reverse = TRUE))
-ggplotly(objeto)
+CONCLUINTES_SSA %>% filter(TP_SEXO %in% c("F")) %>% group_by(ANO_CENSO_SUP) %>% summarise(value =sum(value)) %>% mutate(ANO_CENSO_SUP=as.character(ANO_CENSO_SUP)) %>%
+  e_charts(x = ANO_CENSO_SUP) %>%   #,width = "100%", height = "200px") %>%
+  e_bar(value,legend = FALSE, name = "Nº Concluintes") %>% 
+  #e_labels(position = "right") %>% 
+  e_labels(position = "top") %>% 
+  e_tooltip() %>% 
+  e_title("Sexo Feminino", "Total") %>% 
+ # e_flip_coords() %>% 
+  e_y_axis(splitLine = list(show = FALSE),formatter = e_axis_formatter("decimal", locale = "pt-br")) %>% 
+  #e_x_axis(show = FALSE) %>%
+  e_x_axis(show = TRUE) %>%
+  e_color(
+    c("#00c4cc", "#db4470"),
+    "#ffffff"
+  ) %>%  e_toolbox_feature(
+    feature = "dataView",
+    title = "Ver dados"
+  ) %>% 
+e_axis_labels(x ="",y= "") %>%
+  e_tooltip(trigger="axis",
+            axisPointer = list(
+              type = "cross"),
+            textStyle=list(fontFamily="arial",
+                           fontSize=12)) %>%
+  e_toolbox_feature(feature = "dataZoom") %>%  
+  e_format_y_axis(suffix = "")  
+
 
 ```
 
